@@ -1,0 +1,35 @@
+@CHARSET "ISO-8859-1";
+.highlight {
+	border-bottom: 1px solid #e6db55;
+	padding: 5px;
+}
+
+.background {
+	background: red;
+}
+ 
+a {
+	color: #00c;
+}
+
+.email {
+	padding-right: 20px;
+	background: url(images/mail.png) no-repeat right center;
+}
+.ebook {
+	padding-right: 20px;
+	background: url(images/pdf.jpg) no-repeat right center;
+}
+
+.hyperlink {
+	padding-right: 20px;
+	background: url(images/external.png) no-repeat right center;
+}
+
+.alt {
+	background: #dda;
+}
+td {
+	padding: 10px;
+	
+}
