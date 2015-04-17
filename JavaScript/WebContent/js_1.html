@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//var name = window.prompt("Hello!What is your name", "");
+	//document.write("Hello "+name+ "! I hope you like javascript");
+	//var x = 5;
+	/* function person(first_name, last_name, age, address) {
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.age = age;
+		this.address = address;
+		//this.printStatus = printStatus;
+	}
+	/* function printStatus() {
+		with(document) {
+			write("Name: "+this.first_name + "Last name: "+this.last_name + "age: "+this.age);
+		}
+	} */
+	
+	//person1 = new person("Sang", "le van", 16, "nam dong");
+	//document.write(person1.first_name + "-"+person1.last_name + "-"+person1.age)
+	//person2 = new person("thoa", "kim", 22, "lao cai");
+	
+	/* /* with(document) {
+		write(person2.first_name + "-"+person2.last_name + "-"+person2.age);
+	} */ */
+	//person2.printStatus(); */
+	
+
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+	function InitArray(numberElement) {
+		this.length = numberElement;
+		for(var x = 1; x < numberElement; x++) {
+			this[x] = 0;
+		}
+		return this;
+	}
+	myArray = new InitArray(10);
+	myArray[1] = "Quang Tri";
+	myArray[2] = "Ha noi";
+	document.write(myArray[1]);
+	</script>
+</body>
+</html>

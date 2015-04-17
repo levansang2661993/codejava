@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var counter = 1;
+	function startCounter() {
+		document.myForm.myText.value = counter++;
+	}
+
+	function stopCounter() {
+		window.clearInterval(clearInter);
+	}
+
+	var clearInter = window.setInterval("startCounter()", 1000);
+</script>
+</head>
+<body onload="startCounter()">
+	<form name="myForm">
+		<input type="text" name="myText" value="" />
+		 <input type="button" value="Clear Interval" onclick="stopCounter()" />
+	</form>
+</body>
+</html>

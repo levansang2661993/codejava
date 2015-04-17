@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function checkAge(form){
+		if((form.age.value < 0) || (form.age.value > 120)) {
+			alert("Tuoi nhap vao khong hop le! Xin moi ban nhap lai");
+			form.age.value= 0;
+		}
+	}
+</script>
+</head>
+	
+<body>
+	<form name = "PHIEU_DIEU_TRA">
+		Nhap vao ten cua ban:<br>
+		Ten <input type="text"name ="ten"maxlength="10" size="10"/><br>
+		Dem <input type="text" name = "dem" maxlength="15" size = "10"/><br>
+		Ho<input type="text" name = "ho" maxlength="10" size = "10"/><br>
+		Age <input type="text" name = "age" maxlength="3" size = "2" onchange="checkAge(PHIEU_DIEU_TRA)"/> 		
+	
+	</form>
+</body>
+</html>

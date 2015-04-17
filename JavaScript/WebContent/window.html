@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//alert
+	//alert("What is your name");
+	var counter = 0;
+	window.captureEvents(Event.CLICK)
+	window.onclick = myClickHandler();
+	function myClickHandler() {
+		window.document.myForm.myText.handleEvent;
+	}
+	
+	function myChange() {
+		document.myForm.myText.value = counter++;
+	}
+</script>
+</head>
+<body>
+
+
+	<!-- <form>
+		// back
+		<input type="button" value ="back" onclick="window.back()">
+		<input type="button" value = "forward" onclick = "window.forward()">
+	</form> -->
+	<form name="myForm">
+		<input type="text" size="2" name="myText" value=" "
+			onclick="myChange()" />
+	</form>
+</body>
+</html>

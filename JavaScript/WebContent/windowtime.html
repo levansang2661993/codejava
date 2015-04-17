@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function showTime() {
+		myTime = new Date();
+		myString = myTime.getHours() + ":" + myTime.getMinutes() + ":"
+				+ myTime.getSeconds();
+		document.myForm.myText.value = myString;
+	}
+
+	function stopTime() {
+		window.clearTimeout(myTimeout);
+	}
+	var myTimeout = window.setTimeout("showTime()", 1000);
+
+	function closeWin() {
+		window.self;
+	}
+	//window.find();
+</script>
+</head>
+<body>
+	<form name="myForm">
+		<input type="text" name="myText" value="" size=20 /> <input
+			type="button" value="Clear Timeout" onclick="stopTime()" /> <input
+			type="button" value="Close window" onclick="closeWin()" />
+	</form>
+</body>
+</html>
