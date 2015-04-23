@@ -10,8 +10,8 @@ public class ConnectionUtil {
 	public static Connection getConnection() throws ClassNotFoundException,
 			SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
-		conn = DriverManager.getConnection(
-				"jdbc:mysql://localhost/3306/fsoft", "root", "2892661993");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost/fsoft",
+				"root", "2892661993");
 		return conn;
 
 	}

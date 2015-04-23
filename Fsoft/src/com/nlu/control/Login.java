@@ -79,21 +79,28 @@ public class Login extends HttpServlet {
 		String url = "";
 		request.setAttribute("email", email);
 		if (email_err.length() > 0 || password_err.length() > 0) {
-			url = "/assignment1/login.jsp";
+			url = "/login.jsp";
 			request.setAttribute("email_err", email_err);
 			request.setAttribute("password_err", password_err);
+			RequestDispatcher rd = getServletContext()
+					.getRequestDispatcher(url);
+			rd.forward(request, response);
 		} else {
 			new LoginM();
 			if (LoginM.checkLogin(email, password) == true) {
-				url = "/assignment1/success.jsp";
+				url = "/success.jsp";
+				RequestDispatcher rd = getServletContext()
+						.getRequestDispatcher(url);
+				rd.forward(request, response);
 			} else {
-				url = "/assignment1/login.jsp";
+				url = "/login.jsp";
+				RequestDispatcher rd = getServletContext()
+						.getRequestDispatcher(url);
+				rd.forward(request, response);
 			}
 
 		}
-		// goi chuyen trang
-		RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
-		rd.forward(request, response);
+
 	}
 
 }

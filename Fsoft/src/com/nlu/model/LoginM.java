@@ -22,10 +22,10 @@ public class LoginM {
 	public static boolean checkLogin(String email, String password) {
 		try {
 			Connection conn = ConnectionUtil.getConnection();
-			String sql = "select * from Accounts where email=? and password=?";
+			String sql = "select * from Accounts where email=? and npassword=?";
 			PreparedStatement pre = conn.prepareStatement(sql);
-			pre.setString(0, email);
-			pre.setString(1, password);
+			pre.setString(1, email);
+			pre.setString(2, password);
 			ResultSet rs = pre.executeQuery();
 			while (rs.next()) {
 				String emails = rs.getString("email");
