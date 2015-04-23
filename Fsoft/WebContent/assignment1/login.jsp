@@ -9,6 +9,20 @@
 	href="${pageContext.request.contextPath}/css/login.css" />
 </head>
 <body>
+	<%
+		String email = "";
+		if (request.getAttribute("email") != null) {
+			email = (String) request.getAttribute("email");
+		}
+		String email_err = "";
+		if (request.getAttribute("email_err") != null) {
+			email_err = (String) request.getAttribute("email_err");
+		}
+		String password_err = "";
+		if (request.getAttribute("password_err") != null) {
+			password_err = (String) request.getAttribute("password_err");
+		}
+	%>
 	<form action="Login" method="post">
 		<h2>Welcome to Hanoi - Aptech Education Center</h2>
 		<br />
@@ -16,18 +30,19 @@
 		<br />
 		<p>
 			Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
-				name="email" id="email" value="" placeholder="Email">
+				name="email" id="email" value="" placeholder="Email"><font
+				color="red"><%=email_err%></font>
 		</p>
 		<br />
 		<p>
 			Password: &nbsp;&nbsp;<input type="password" name="password"
-				id="passsword" placeholder="password">
+				id="passsword" placeholder="password"><font color="red"><%=password_err %></font>
 		</p>
 		<p>
 			<input type="submit" value="Login" id="login" />
 		</p>
 		<p>
-			Not registered?&nbsp;&nbsp;Click <a href="/assignment1/register.jsp"
+			Not registered?&nbsp;&nbsp;Click <a href="register.jsp"
 				id="reg">here</a>
 		</p>
 	</form>
