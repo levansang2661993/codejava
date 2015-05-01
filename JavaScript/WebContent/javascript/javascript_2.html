@@ -36,14 +36,37 @@
 		
 		// ham không có return 
 		// khai báo hàm
-		function tinh_tong(a, b) {
+	/* 	function tinh_tong(a, b) {
 			document.write('Tổng là '+(a + b));
 		}
 		// sử dụng
 		var so1 = 1;
 		var so2 = 2;
 		// truyền vào hàm
-		tinh_tong(so1, so2);
+		tinh_tong(so1, so2); */
+		
+		// khai báo hàm
+		function kiem_tra_nam_nhuan(nam) {
+			// nếu năm chia hết cho 100
+			// thì kiểm tra nó co chia hết cho 400 hay không
+			if(nam % 100) {
+				// nếu chia hết cho 400 thì là năm nhuận
+				if(nam % 400 == 0) {
+					alert(nam + ' là năm nhuận');
+				} else {
+					alert(name + ' không phải năm nhuận');
+				}
+			} else 
+				if(nam % 4 == 0) {
+					alert(name + " là năm nhuận");
+				}
+			 else {
+				alert(nam + " không phải năm nhuận");
+			}
+		}
+		
+		// su dung
+		kiem_tra_nam_nhuan(2000);
 		
 	</script>
 </body>

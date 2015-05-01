@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/* // hai biến lưu min và max
+		var min = null;
+		var max = null;
+		// biến lưu giá trị người dùng nhập vào
+		var value = '';
+		// trong khi người dùng chưa nhấn hủy 
+		// vì người dùng nhấn hủy tức là value = null,
+		// thì sẽ dừng vòng lặp
+		while(value != null) {
+			// lấy giá trị
+			value = prompt("Nhập số, nếu muốn dừng thì không nhập gì");
+			// nếu người dùng nhấn hủy thì không thực thi những đoạn code
+			if(value != null) {
+				// nếu nhập lần đầu thì gán cả hai min và max bằng value
+				if(min == null) {
+					min = value;
+					max= value;
+				} else{
+					// ngược lại sẽ kiểm tra gán min và max
+					if(min > value) {
+						min = value;
+					} 
+					if(max > value) {
+						max= value;
+					}
+				}
+			}
+		}
+		
+		// in ra
+		document.write("Min là "+min+",Max là "+max); */
+
+		// kiem tra so chinh phuong
+		function so_chinh_phuong(a) {
+			// ta dung hàm Math.sqrt để lấy căn bậc 2
+			// sau đó chia lấy dư với 1, nếu bằng 0 thì là số chính phương
+			// ngược lai thì không phải là số chính phương
+			if (Math.sqrt(a) % 1 == 0) {
+				alert(a + " là số chính phương");
+			} else {
+				alert(a + " không phải là số chính phương");
+			}
+		}
+		so_chinh_phuong(4);
+		so_chinh_phuong(12);
+		so_chinh_phuong(36);
+	</script>
+</body>
+</html>
