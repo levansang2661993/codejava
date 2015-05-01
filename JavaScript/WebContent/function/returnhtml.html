@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function multiplyByFive(aNumber) {
+		return aNumber * 5;
+	}
+	document.write("3 * 5 =", multiplyByFive(3));
+
+	function calcAvg() {
+		var inpNum1 = 1;
+		var inpNum2 = 2;
+		var inpNum3 = 3;
+		var inpNum4 = 4;
+		numAvg = doCalcAvg(inpNum1, inpNum2, inpNum3, inpNum4);
+		document.write("The average of the four numbers you entered is:"
+				+ numAvg);
+	}
+
+	function doCalcAvg(inpNum1, inpNum2, inpNum3, inpNum4) {
+		var ans;
+		ans = (Number(inpNum1) + Number(inpNum2) + Number(inpNum3) + Number(inpNum4));
+		return (ans);
+	}
+</script>
+</head>
+<body onload="calcAvg()">
+	<script type="text/javascript" language="JavaScript">
+		function getValue() {
+			var myValue = 4 * 4;
+			return myValue;
+		}
+		function fill() {
+			var x = getValue();
+			document.form1.tmp.value = x;
+		}
+	</script>
+	<form name="form1">
+		Value: <input type="text" name="tmp" size=5> <br> <br>
+		<input type="button" name="get" value="Get returned value"
+			onclick="fill()"> <br> <br>
+	</form>
+</body>
+</html>
