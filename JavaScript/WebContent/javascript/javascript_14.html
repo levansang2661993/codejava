@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" id="txt-val" value="" />
+	<div id="result"></div>
+	
+	<script type="text/javascript" language="javascript">
+		// sử dụng sự kiện onkeyup và bỏ đi chữ on sẽ là keyup
+		// de su dung su kien addEventListener
+		// cau truc su dung ham addEventListener co cú pháp sau:
+		// elementOjbect.addEventListener('eventName',function(e) {
+		//	// do something
+		//});
+		// trong do: eventName là tên của sự kiện bỏ đi chữ on ví dụ click
+		// doi voi IE 8 khong ho tro su kien addEventListener va getElementByClassName
+		var input = document.getElementById("txt-val");
+
+		// them su kien cho doi tuong
+		input.addEventListener("keyup", function() {
+			// gan gia tri vao div
+			document.getElementById("result").innerHTML = input.value;
+		});
+		// bo sung hanh dong
+		input.addEventListener('keyup', function() {
+			if(input.value.length > 5) {
+				alert("Bạn đã nhập nhiều hơn 5 ký tự");
+			}
+		});
+	</script>
+</body>
+</html>
