@@ -3,8 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- <link rel="stylesheet" type="text/css" href="css/styles.css" /> -->
+<style type="text/css">
+#dropdown {
+	width: 200px
+}
 
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+#dropdown li {
+	list-style: none;
+	line-height: 30px;
+	background: blue;
+	margin: 2px;
+}
+
+#dropdown li a {
+	margin-left: 10px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+#dropdown ul {
+	display: none;
+	padding: 0px;
+	background: pink
+}
+
+#dropdown ul li {
+	background-color: pink
+}
+</style>
 </head>
 <body>
 	<ul id="dropdown">
@@ -27,7 +54,29 @@
 				<li><a href="#">Quảng cáo web</a></li>
 				<li><a href="#">Thiết kế đồ họa</a></li>
 			</ul></li>
-
 	</ul>
+	<script type="text/javascript" language="javascript">
+		// lay danh sach menu
+		var menu = document.querySelectorAll('#dropdown > li');
+		// lap qua tung menu de gan su kien click
+		for ( var i = 0; i < menu.length; i++) {
+			menu[i].addEventListener('click',
+					function() {
+						// ẩn hết menu con
+						var menuList = document
+								.querySelectorAll('#dropdown > li > ul');
+						for ( var j = 0; j < menuList.length; j++) {
+							menuList[j].style.display = "none";
+						}
+						// hiển thị menu hiện tại
+						// đối tượng this chính là thẻ li hiện tại
+						// nên ta sử dụng mảng childrent để lấy danh sách thẻ con
+						// mà thẻ ul nằm ở vị trí thứ 2 nên trong mảng con nó
+						// sẽ có vị trí là 1 
+						this.children[1].style.display = "block";
+
+					});
+		}
+	</script>
 </body>
 </html>

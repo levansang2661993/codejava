@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// hoc ve dom-node
+		// khi bạn sử dụng DOM Element để truy vấn tới một đối tượng HTML nào đó thì kết quả nó sẽ trả về một object và object đó gọi là DOM Nodes
+		// tạo mới một thẻ p
+		/* 	var p = document.createElement("p");
+			// thêm nội dung HTML vào thẻ P
+			p.innerHTML = "Hoc DOM Nodes này cưng";
+			// đưa thẻ P vào trong thẻ body
+			document.getElementsByTagName("body")[0].appendChild(p); */
+
+		// text node là mộ node đặc biệt, nó không phải là một thẻ HTML thông thường mà chỉ là
+		// một chuổi(String) nên thông thương chúng ta sử dụng nó để thay thế cách gán thông thường node.innerHTML
+		var p = document.createElement("p");
+		//tạo text node
+		var text = document.createTextNode("Học DOM Nodes này cưng 2");
+		// thêm nội dung HTML vào thẻ p
+		p.appendChild(text);
+		// dua the p vao trong the body
+		document.getElementsByTagName("body")[0].appendChild(p);
+	</script>
+</body>
+</html>
