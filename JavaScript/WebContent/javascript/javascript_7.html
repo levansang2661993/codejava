@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- viết chương trình khi người dùng copy nội dung
+	<!-- 	của website thì thông báo là bạn đã copy thành công -->
+	<!-- <script language="javascript" type="text/javascript">
+		function show_message() {
+			alert("Bãn đã copy thành công");
+		}
+	</script>
+	<h3>Hãy copy dòng chữ dưới đây:</h3>
+	<div oncopy="show_message()">Chào mừng các bạn đến với website</div> --> 
+	<!-- viet chuon trinh tinh tong cua hai so nhap vao tu dong  -->
+	<script type="text/javascript">
+		function tinh() {
+			var a = document.getElementById("a");
+			var b = document.getElementById("b");
+			var result = document.getElementById("result");
+			// tính tổng hai ô đầu tiên
+			var tong = parseInt(a.value) + parseInt(b.value);
+			// gán giá trị vào ô thứ ba
+			// phải kiểm tra tổng hai số này có bị lổi hay không
+			if(!isNaN(tong)) {
+				result.value = tong;
+			}
+		}
+	</script>
+	<p>a: <input type="text" id="a" value="" onkeyup="tinh()"/>
+	<p>b: <input type="text" id="b" vlaue="" onkeyup="tinh()"/>
+	<p>Kết quả: <input type="text" id="result" value=""/>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// in cac phần tử của mảng ra ngoài
+		var t = new Array(1,2,3);
+		document.writeln(t.join()); // ket qua 1, 2, 3
+		document.write(t.join('-')); // kêt qua 1-2-3
+		// so phan tu cua mang
+		//alert(t.length);
+		// array.valueOf(): sẽ nối các phần tử với nhau vào một chuổi cách nhau bởi dấu phẩy
+		var mang = ["Học", "Lập", "Trình", "Java", "Script"];
+		document.write("<br/>"+mang.valueOf());
+		// array.push(): hàm thêm một phẩn tử vào cuối mảng
+		// thêm vào và in ra
+		mang.push("Kim Buffalo");
+		document.write("<br/>" +mang.valueOf());
+		// array.pop(): hàm này có tác dụng xóa đi phần tử cuối cùng trong mảng.
+		// xóa phần tử cuối cùng
+		mang.pop();
+		document.write("<br/>"+mang.valueOf());
+		// array.shift(): hàm này xóa phần tử đầu tiên của mảng, sau đó dồn các phần tử phía sau xuống một bậc.
+		// xóa phần tử đầu tiên
+		mang.shift();
+		document.write("<br/>"+mang.valueOf());
+		// array.unshift(): hàm này thêm một phần tử vào vị trí đầu tiên của mảng, đồng thời đẩy các phần tử phía sau lên một bậc.
+		// thêm một phần tử  vào vi tri đầu tiên
+		mang.unshift("Chào Mừng");
+		document.write("<br/>"+mang.valueOf());
+		// array.splice(): hàm splice() có ba tham số truyền vào như sau: 
+		// splice(position_add, num_element_remove, value1, value2,...)
+		// trong đó:
+		// +position_add là vị trí sẽ thêm (vị trí đầu tiên là 0)
+		// +num_element_remove là số phần tử sẽ xóa(bắt đầu từ position_add)
+		// +value1, value2, ... là danh sách các phần tử sẽ được thêm vào sau khi tại vị trí position_add và sau khi remove num_element_remove phần tử.
+		mang.splice(3,2,"Web", "Nâng Cao");// có thể dùng hàm splice để xóa phần tử
+		document.write("<br/>"+mang.valueOf());
+		// array.sort(): hàm này dùng để sắp xếp các phần tử trong mảng theo thứ tự chứ cái alpha
+		mang.sort();
+		document.write("<br/>"+mang.valueOf());
+		// array.reverse(): là hàm này đảo ngược các phần tử lại.
+		mang.reverse();
+		document.write("<br/>"+mang.valueOf());
+		// array.concat(): hàm này dùng để nói hai mảng với nhau và trả về một mảng gồm tổng số phần tử của hai mảng đó.
+		var mang2 = ["Hoc", "Là", "Trên", "Hết"];
+		// nối mảng
+		var mang_con = mang.concat(mang2);
+		document.write("<br/>"+mang_con.valueOf());
+		// arry.slice(): hàm này dùng để lấy một số phần tử con trong mảng. Có hai tham số truyền vào như sau: 
+		// slice(start, end)
+		// trong đó:
+	    // +start: là vị trí bắt đầu.
+	    // + end: là vị trí kết thúc.
+		var mang_moi = mang_con.slice(3,5);
+		document.write("<br/>"+mang_moi.valueOf());
+		
+	</script>
+</body>
+</html>

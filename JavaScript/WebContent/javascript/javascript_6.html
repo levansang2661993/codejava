@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- Sự kiện Event trong javascript
+		- Về định nghĩa dưới dạng nghe hiểu thì sự hiện là một hành động nào đó tác động 
+		lên đối tượng HTML mà ta có thể bắt được sự kiện này và thực hiện những hành đông nào đó.
+		- Mỗi sự kiện chúng ta có thể có nhiều hành động. Ví dụ bán có một sự kiện là tết âm lịch thì bạn
+		sẽ có những hành động trong sự kiện đó là mua đồ mới, dọn dẹp nhà cửa, mua bao lixi..
+		
+		- Xét về mặt thực tế thì ta có hiểu cụ thể là: Giả sử xây dựng một form đăng ký
+		tai khoản và bạn muốn bắt sự kiện khi người dùng CLICK vào button đăng ký thì hiên những hành động như validate dữ liệu, thông báo nếu 
+		người dùng nhập nội dung không đúng....Như vậy bạn cần nhớ rằng mỗi sự kiện chúng ta có thể thực hiện 
+		nhiều hành động khác nhau và bao nhiêu hành động thì phụ thuộc vào từng chức năng cụ thể.
+		// BẢNG SỰ KIỆN THÔNG DỤNG TRONG JAVASCRIPT
+		1. onclick: xảy ra khi click vào thẻ HTML
+		2. ondblick: xảy ra khi double click vào thẻ HTML
+		3. onchange: xảy ra khi giá trị của thẻ HTML đổi. Thường dùng trong các thẻ form input
+		4. onmouseover: xảy ra khi con trẻ chuột bắt đầu đi vào thẻ HTML.
+		5. onmouseout: xảy ra khi con trỏ chuột bắt đầu rời khỏi thẻ HTML.
+		6. onmouseenter: tương tự onmouseover
+		7. onmouseleave: tương tự như onmouserout
+		8. onmousemove: xảy ra khi con chuột di chuyển bên trong thẻ HTML
+		9. onkeydown: xảy ra khi gõ một phím bất kì vào ô input
+		10. onload: sảy ra khi thẻ HTML bắt đầu chạy, nó giống như hàm khởi tạo trong lập trình hướng đối tượng
+		11. onkeyup: xảy ra khi bạn gõ phím nhưng lúc bạn nhã phím ra sẽ được kich hoạt.
+		12. onkeypress: xảy ra khi bạn nhấn một phím vào ô input.
+		13. onblur: xảy ra khi con trỏ chuột rời khỏi ô input
+		14. oncopy: xảy ra khi bạn copy nội dung của thẻ.
+		15. oncut: xãy ra khi bạn cắt nội dung của thẻ.
+		16. onpaste: xảy ra khi bạn dán nội dung của thẻ.
+	  -->
+	  <script language="javascript" type="text/javascript">
+	  	// hàm show kết quả
+	  	function show_result() {
+	  		// lấy hai thẻ HTML
+	  		var input = document.getElementById("message");
+	  		var div = document.getElementById("result");
+	  		// gán nội dung ô input vào thẻ div
+	  		div.innerHTML = input.value;
+	  	}
+	  </script>
+	  <input type="text" id="message" value="" onkeyup="show_result()"/>
+	  <div id="result"></div>
+</body>
+</html>
