@@ -21,6 +21,7 @@
 				<li><a href="#view1">Detail 1</a></li>
 				<li><a href="#view2">Detail 2</a></li>
 				<li><a href="#view3">Detail 3</a></li>
+				<li><a href="#view4">Detail 4</a></li>
 				
 			</ul>
 			<div class="tabcontents">
@@ -33,6 +34,9 @@
 				<div id="view3">
 					<jsp:include page="detail_3.jsp"></jsp:include>
 				</div>			
+				<div id="view4">
+					<jsp:include page="detail_4.jsp"></jsp:include>
+				</div>	
 			</div>
 		</div>
 	</div>

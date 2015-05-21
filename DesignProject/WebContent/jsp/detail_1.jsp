@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/detail_1.css" />
 <script src="${pageContext.request.contextPath}/js/script.js"></script>
-
+<script src="${pageContext.request.contextPath}/js/premise.js"></script>
 </head>
 <body>
 	<div class="content">
@@ -48,9 +48,10 @@
 					</select></td>
 					<td><label>Location Type <span class="mandatory">*</span></label></td>
 					<td><div class="containertype" style="margin-left: 70px;">
-							<input type="checkbox" /> Enterprise <br /> <input
-								type="checkbox" /> Support Center<br /> <input type="checkbox" />
-							Project <br /> <input type="checkbox" />Add<br />
+							<input type="checkbox"  class="checktype" onclick="activeTab4('tab1')"/> Enterprise <br /> <input
+								type="checkbox" class="checktype" /> Support Center<br />
+								 <input type="checkbox" class="checktype"/>
+							Project <br /> <input type="checkbox" class="checktype"/>Add<br />
 						</div></td>
 				</tr>
 
