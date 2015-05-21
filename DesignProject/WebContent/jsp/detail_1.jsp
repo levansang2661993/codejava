@@ -6,11 +6,12 @@
 <title>Detail 1</title>
 <link rel="stylesheet"
 	href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<script src="../js/jquery-1.6.2.min.js"></script>
-<script src="../js/jquery-ui-1.8.15.custom.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-1.6.2.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-ui-1.8.15.custom.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="../css/detail_1.css" />
-<script src="../js/script.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/detail_1.css" />
+<script src="${pageContext.request.contextPath}/js/script.js"></script>
 
 </head>
 <body>
@@ -96,9 +97,9 @@
 					<td><input type="text" name="city" class="input" /></td>
 					<td><label>Shop Flag Date</label></td>
 					<td><div>
-							<input type="text" name="flagdate" id="dateflag"
-								class="input" placeholder="dd/MM/yyyy" />
-					</div></td>
+							<input type="text" name="flagdate" id="dateflag" class="input"
+								placeholder="dd/MM/yyyy" />
+						</div></td>
 				</tr>
 				<tr>
 					<td><label>Country</label></td>
@@ -110,11 +111,12 @@
 				</tr>
 
 				<tr>
-					<td><label style="color:blue;">Location Opending Times</label></td>
+					<td><label style="color: blue;">Location Opending
+							Times</label></td>
 					<td></td>
 					<td><label>Specialist Shop</label></td>
-					<td><input type="checkbox" name="speciallist" checked="checked"
-						style="margin-left: 70px;" /></td>
+					<td><input type="checkbox" name="speciallist"
+						checked="checked" style="margin-left: 70px;" /></td>
 				</tr>
 			</table>
 		</form>

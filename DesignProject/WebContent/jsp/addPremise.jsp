@@ -4,8 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="../css/addpremise.css" />
- <script src="../js/tabcontent.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/addpremise.css" />
+ <script src="${pageContext.request.contextPath}/js/tabcontent.js" type="text/javascript"></script>
 </head>
 <body>
 	<div id="menu"><jsp:include page="header.jsp"></jsp:include></div>
@@ -27,9 +27,12 @@
 				<div id="view1">
 					<jsp:include page="detail_1.jsp"></jsp:include>
 				</div>
-				<div id="view2"></div>
-				<div id="view3"></div>
-				
+				<div id="view2">
+					<jsp:include page="detail_2.jsp"></jsp:include>
+				</div>
+				<div id="view3">
+					<jsp:include page="detail_3.jsp"></jsp:include>
+				</div>			
 			</div>
 		</div>
 	</div>

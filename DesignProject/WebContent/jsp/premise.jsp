@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="../css/premise.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/premise.css" />
 </head>
 <body>
 	<div id="menu"><jsp:include page="header.jsp"></jsp:include></div>

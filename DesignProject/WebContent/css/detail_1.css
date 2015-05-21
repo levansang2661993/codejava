@@ -76,7 +76,7 @@ a {
 
 .tablescrol .containertype {
 	border: 2px solid #ccc;
-	width: 200px;
+	width: 255px;
 	height: 80px;
 	overflow-y: scroll;
 }
