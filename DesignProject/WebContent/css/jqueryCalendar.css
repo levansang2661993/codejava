@@ -553,7 +553,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
     filter: mask(); /*must have*/
     top: -4px; /*must have*/
     left: -4px; /*must have*/
-    width: 300px; /*must have*/
+    width: 200px; /*must have*/
     height: 200px; /*must have*/
 }/*
  * jQuery UI Progressbar 1.8.15

@@ -4,17 +4,70 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Detail 1</title>
-<link rel="stylesheet"
-	href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<script src="${pageContext.request.contextPath}/js/jquery-1.6.2.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/jquery-ui-1.8.15.custom.min.js"></script>
+<!-- <link rel="stylesheet"
+	href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" /> -->
 
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/detail_1.css" />
-<script src="${pageContext.request.contextPath}/js/script.js"></script>
-<script src="${pageContext.request.contextPath}/js/premise.js"></script>
+	href="${pageContext.request.contextPath}/css/jqueryCalendar.css" />	
+	<script src="${pageContext.request.contextPath}/js/jquery-ui.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-1.6.2.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/js/jquery-ui-1.8.15.custom.min.js"></script>
+
+<%-- <link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/detail_1.css" /> --%>
+<%-- <script src="${pageContext.request.contextPath}/js/script.js"></script>
+<script src="${pageContext.request.contextPath}/js/premise.js"></script> --%>
+<script type="text/javascript">
+	function activeTab4() {
+		var s = document.getElementById("checktype");
+		var t = document.getElementById("view4");
+
+		var t1 = document.getElementById("view41");
+		if (s.value = 'on') {
+			t.style.display = "inline";
+			t1.style.display = "inline";
+		} else {
+			document.getElementById("view4").display = "none";
+		}
+	}
+</script>
+
+<script>
+	function popopentime(url, w, h) {
+		var left = (screen.width / 2) - (w / 2);
+		var top = (screen.height / 2) - (h / 2);
+		newwindow = window
+				.open(
+						url,
+						'name',
+						'toolbar=no, location=no, directories=no, status=no, menubar = no, scrollbars=no, resizable=no, width='
+								+ w
+								+ ',height='
+								+ h
+								+ ',top='
+								+ top
+								+ ',left='
+								+ left);
+		if (window.focus) {
+			newwindow.focus()
+		}
+		return false;
+	}
+</script>
+<script type="text/javascript">
+	jQuery.noConflict();
+</script>
+<script type="text/javascript">
+	function uncheck() {
+		$(':checkbox:checked').prop('checked',false);
+	}
+	jQuery(function() {
+		jQuery("#datepicker").datepicker();
+	});
+</script>
 </head>
-<body>
+<body onload="uncheck()">
 	<div class="content">
 		<form class="form">
 			<table class="tablescrol">
@@ -48,10 +101,14 @@
 					</select></td>
 					<td><label>Location Type <span class="mandatory">*</span></label></td>
 					<td><div class="containertype" style="margin-left: 70px;">
-							<input type="checkbox"  class="checktype" onclick="activeTab4('tab1')"/> Enterprise <br /> <input
-								type="checkbox" class="checktype" /> Support Center<br />
-								 <input type="checkbox" class="checktype"/>
-							Project <br /> <input type="checkbox" class="checktype"/>Add<br />
+							<input type="checkbox" class="checktype" id="checktype"
+								onclick="activeTab4();" /> Enterprise <br /> <input
+								type="checkbox" class="checktype" id="checktype"
+								onclick="activeTab4();" /> Support Center<br /> <input
+								type="checkbox" class="checktype" id="checktype"
+								onclick="activeTab4();" /> Project <br /> <input
+								type="checkbox" class="checktype" id="checktype"
+								onclick="activeTab4();" />Add<br />
 						</div></td>
 				</tr>
 
@@ -112,14 +169,18 @@
 				</tr>
 
 				<tr>
-					<td><label style="color: blue;">Location Opending
-							Times</label></td>
+					<td><a
+						href="${pageContext.request.contextPath}/jsp/opentime.jsp"
+						style="color: blue;"
+						onclick="return popopentime('opentime.jsp', 650, 600)">Location
+							Opending Times</a></td>
 					<td></td>
 					<td><label>Specialist Shop</label></td>
 					<td><input type="checkbox" name="speciallist"
 						checked="checked" style="margin-left: 70px;" /></td>
 				</tr>
 			</table>
+
 		</form>
 	</div>
 </body>

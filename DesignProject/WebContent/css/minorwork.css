@@ -1,5 +1,4 @@
 @CHARSET "UTF-8";
-
 .content {
 	width: 100%;
 }
@@ -61,9 +60,6 @@ a {
 	font-size: 12px;
 }
 
-.tablescrol .containertype {
-	border: 2px solid #ccc;
-	width: 255px;
-	height: 80px;
-	overflow-y: scroll;
+.form input[type="radio"]{
+     background-color:blue;
 }
